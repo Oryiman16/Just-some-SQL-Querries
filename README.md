@@ -1,2 +1,2 @@
 # Just-some-SQL-Querries
-Trying out some SQL querries
+Trying out some SQL querries!
