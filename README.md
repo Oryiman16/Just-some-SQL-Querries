@@ -1,7 +1,7 @@
 # Just-some-SQL-Querries
 Trying out some SQL querries!
 
-  I wrote a Case Statement to categorize profit margin from an online sport wear sales shop
+  --Case Statement to categorize profit margin from a sales shop
 
 select retailer, city, product, operating_profit, sales_method,
 case
