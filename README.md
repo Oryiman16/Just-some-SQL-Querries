@@ -15,3 +15,17 @@ when operating_profit > 20000 and operating_profit < 30000 then 'high profit'
 else 'exceptional profit'
 end
 from addidas_sales
+
+
+--How do you return the cumulative sum (running total) in SQL?
+SELECT 
+ date,
+ sales,
+ SUM(sales) OVER (PARTITION BY MONTH(date) ORDER BY date) AS cumulative_monthly_sales
+FROM yourTable
+
+- SUM() calculates a running total sum 
+- PARTITION BY splits the data by month
+- ORDER BY sorts the rows chronologically 
+
+The resultset will contain the original daily sales data, plus a new cumulative_monthly_sales column calculating the running total.
