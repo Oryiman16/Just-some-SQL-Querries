@@ -1,4 +1,4 @@
-# Just-some-SQL-Querries/ Data Quality Test Query
+# SQL-Querries/ Data Quality Test Query
 Trying out some SQL querries!
 
   --Case Statement to categorize profit margin from a sales shop
