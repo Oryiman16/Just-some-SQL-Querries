@@ -1,4 +1,4 @@
-# Just-some-SQL-Querries
+# Just-some-SQL-Querries/ Data Quality Test Query
 Trying out some SQL querries!
 
   --Case Statement to categorize profit margin from a sales shop
@@ -29,3 +29,32 @@ FROM yourTable
 - ORDER BY sorts the rows chronologically 
 
 The resultset will contain the original daily sales data, plus a new cumulative_monthly_sales column calculating the running total.
+
+--SQL QUERIES--
+
+--CHARINDEX--
+--E.G Select CHARINDEX ('substring', column name), column name from table name--
+
+--SUBSTRING--
+--Use to select substring within a string eg select substring 'man' from string 'Oryiman'--
+--E.g Select substring (column name, 1, CHARINDEX ('substring', column name)) from table name--
+
+--DATA QUALITY TESTS--
+--1 Row Count test: 
+	Select count (*) from table name--
+
+--2 Column count test: 
+	select count * as column_count 
+		from information_schema.columns
+		where table name ='table name'
+    
+--3 Data Type test: 
+	select column_name, data_type
+		from information_schema_columns
+        where table name = 'table name'
+        
+--4 Duplicate count test: 
+	select  column name, count (*) as duplicate_count
+		from table name
+		Group by column name
+		Having count (*) >1
